@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme de voyage</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Programme de voyage</h1>
+        <p>Planifiez votre voyage en Tunisie</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a> |
+        <a href="destinations.html">Destinations</a> |
+        <a href="activites.html">Activités</a> |
+        <a href="programme.html">Programme</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <main>
+
+        <section>
+            <h2>Créer votre programme de voyage</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend>Informations du voyage</legend>
+
+                    <label for="destination">Destination :</label>
+                    <select id="destination" name="destination">
+                        <option value="">-- Choisir une destination --</option>
+                        <option value="djerba">Djerba</option>
+                        <option value="sahara">Sahara</option>
+                        <option value="tozeur">Tozeur</option>
+                        <option value="douz">Douz</option>
+                        <option value="tataouine">Tataouine</option>
+                        <option value="matmata">Matmata</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="date_depart">Date de départ :</label>
+                    <input type="date" id="date_depart" name="date_depart">
+
+                    <br><br>
+
+                    <label for="date_retour">Date de retour :</label>
+                    <input type="date" id="date_retour" name="date_retour">
+
+                    <br><br>
+
+                    <label for="voyageurs">Nombre de voyageurs :</label>
+                    <input type="number" id="voyageurs" name="voyageurs"
+                           min="1" max="20" value="1">
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Activités</legend>
+
+                    <input type="checkbox" id="plage" name="activite" value="plage">
+                    <label for="plage">Plage et baignade</label>
+
+                    <br>
+
+                    <input type="checkbox" id="dromadaire" name="activite" value="dromadaire">
+                    <label for="dromadaire">Promenade à dos de dromadaire</label>
+
+                    <br>
+
+                    <input type="checkbox" id="4x4" name="activite" value="4x4">
+                    <label for="4x4">Excursion en 4x4 dans le Sahara</label>
+
+                    <br>
+
+                    <input type="checkbox" id="oasis" name="activite" value="oasis">
+                    <label for="oasis">Visite des oasis</label>
+
+                    <br>
+
+                    <input type="checkbox" id="culture" name="activite" value="culture">
+                    <label for="culture">Visite culturelle</label>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Hébergement</legend>
+
+                    <input type="radio" id="hotel" name="hebergement" value="hotel">
+                    <label for="hotel">Hôtel</label>
+
+                    <br>
+
+                    <input type="radio" id="maison" name="hebergement" value="maison">
+                    <label for="maison">Maison d'hôtes</label>
+
+                    <br>
+
+                    <input type="radio" id="campement" name="hebergement" value="campement">
+                    <label for="campement">Campement dans le Sahara</label>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Transport</legend>
+
+                    <label for="transport">Choisir un moyen de transport :</label>
+
+                    <select id="transport" name="transport">
+                        <option value="">-- Choisir --</option>
+                        <option value="voiture">Voiture</option>
+                        <option value="bus">Bus</option>
+                        <option value="train">Train</option>
+                        <option value="avion">Avion</option>
+                    </select>
+
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Informations supplémentaires</legend>
+
+                    <label for="commentaire">
+                        Décrivez vos préférences :
+                    </label>
+
+                    <br><br>
+
+                    <textarea id="commentaire"
+                              name="commentaire"
+                              rows="5"
+                              cols="50"
+                              placeholder="Écrivez vos préférences ou demandes..."></textarea>
+
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Créer mon programme</button>
+                <button type="reset">Réinitialiser</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Tunisia Travel - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+</body>
+</html>
