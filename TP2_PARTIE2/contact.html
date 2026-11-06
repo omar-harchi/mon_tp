@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <title>Tunisia Travel - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
 <header>
@@ -20,120 +20,148 @@
     <a href="connexion.html">connexion</a>
 </nav>
 
-<section>
+<main>
+    <form action="#" method="post">
 
-    <h2>Formulaire de réservation</h2>
+        <fieldset>
+            <legend>1 – Vos coordonnées</legend>
 
-    <form>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom"
+                   placeholder="Votre nom" required
+                   autofocus maxlength="50">
 
-        <label>*Nom :</label>
-        <input type="text" name="nom" required>
-        <br><br>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom"
+                   placeholder="Votre prénom" required
+                   maxlength="50">
 
-        <label>*Email :</label>
-        <input type="email" name="email" required>
-        <br><br>
+            <label for="naissance">Date de naissance :</label>
+            <input type="date" id="naissance" name="naissance">
 
-        <label>*Âge :</label>
-        <input type="number" name="age" required>
-        <br><br>
+            <label for="email">Adresse email :</label>
+            <input type="email" id="email" name="email"
+                   placeholder="exemple@email.com" required>
 
-        <label>Date du voyage :</label>
-        <input type="date" name="date">
-        <br><br>
+            <label for="site">Site web :</label>
+            <input type="url" id="site" name="site"
+                   value="http://www."
+                   placeholder="https://monsite.com">
 
-        <label>Heure d'arrivée :</label>
-        <input type="time" name="heure">
-        <br><br>
+            <label for="password">Code secret :</label>
+            <input type="password" id="password" name="password"
+                   minlength="6" maxlength="20">
 
-        <label>Destination :</label>
+            <p>Genre :</p>
+            <input type="radio" id="homme" name="genre"
+                   value="Homme" checked>
+            <label for="homme">Homme</label>
 
-        <select name="destination">
+            <input type="radio" id="femme" name="genre"
+                   value="Femme">
+            <label for="femme">Femme</label>
+        </fieldset>
 
-            <option value="djerba">Djerba</option>
-            <option value="hammamet">Hammamet</option>
-            <option value="tozeur">Tozeur</option>
-            <option value="tunis">Tunis</option>
+        <fieldset>
+            <legend>2 – Informations complémentaires</legend>
 
-        </select>
+            <label for="pays">Pays :</label>
+            <select id="pays" name="pays">
+                <option>Tunisie</option>
+                <option>France</option>
+                <option>Algérie</option>
+                <option>Maroc</option>
+                <option>Autre</option>
+            </select>
 
-        <br><br>
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone"
+                   pattern="[0-9]{8}"
+                   placeholder="12345678">
 
-        <p>Activités souhaitées :</p>
+            <label for="adresse">Adresse postale :</label>
+            <input type="text" id="adresse" name="adresse"
+                   placeholder="Votre adresse">
 
-        <input type="checkbox" name="plage">
-        Plage
+            <label for="postal">Code postal :</label>
+            <input type="text" id="postal" name="postal"
+                   value="1000" maxlength="4">
 
-        <input type="checkbox" name="desert">
-        Désert
+            <label for="semestre">Semestre :</label>
+            <select id="semestre" name="semestre">
+                <option>S1</option>
+                <option>S2</option>
+                <option>S3</option>
+                <option>S4</option>
+            </select>
 
-        <input type="checkbox" name="culture">
-        Culture
+            <label for="region">Région préférée :</label>
+            <select id="region" name="region">
+                <option>Tunis</option>
+                <option>Sousse</option>
+                <option>Sfax</option>
+                <option>Djerba</option>
+                <option>Tozeur</option>
+            </select>
+        </fieldset>
 
-        <input type="checkbox" name="sport">
-        Sport
+        <fieldset>
+            <legend>3 – Goûts et centres d'intérêt</legend>
 
-        <br><br>
+            <p>Centres d'intérêt :</p>
 
-        <p>Type de voyage :</p>
+            <input type="checkbox" id="culture"
+                   name="interets[]" value="Culture" checked>
+            <label for="culture">Culture</label>
 
-        <input type="radio" name="voyage" value="famille">
-        Famille
+            <input type="checkbox" id="gastronomie"
+                   name="interets[]" value="Gastronomie">
+            <label for="gastronomie">Gastronomie</label>
 
-        <input type="radio" name="voyage" value="amis">
-        Entre amis
+            <input type="checkbox" id="plage"
+                   name="interets[]" value="Plage">
+            <label for="plage">Plage</label>
 
-        <input type="radio" name="voyage" value="seul">
-        Seul
+            <input type="checkbox" id="desert"
+                   name="interets[]" value="Désert">
+            <label for="desert">Désert</label>
 
-        <br><br>
-        <label for="">*si votre choix ei famille choisir le nombre:</label>
-        <input type="number" name="" id="" required>
-        <br>
+            <input type="checkbox" id="histoire"
+                   name="interets[]" value="Histoire">
+            <label for="histoire">Histoire</label>
 
-        <label>Votre message :</label>
-        <br>
+            <label for="niveau">Niveau en HTML :</label>
+            <input type="range" id="niveau" name="niveau"
+                   min="0" max="100" step="10">
 
-        <textarea
-            rows="6"
-            cols="50"
-            placeholder="Écrivez vos préférences ou demandes..">
-        </textarea>
+            <label for="note">Note de satisfaction :</label>
+            <input type="number" id="note" name="note"
+                   min="1" max="10" step="1">
 
-        <br><br>
+            <label for="message">Message / Commentaire :</label>
+            <textarea id="message" name="message"
+                      rows="5" cols="40"
+                      placeholder="Votre message..."></textarea>
+        </fieldset>
 
-        <button type="submit">Envoyer</button>
-        <button type="reset">Effacer</button>
+        <fieldset>
+            <legend>4 – Photo</legend>
+
+            <label for="photo">Photo de profil :</label>
+            <input type="file" id="photo" name="photo"
+                   accept="image/*">
+        </fieldset>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Effacer">
 
     </form>
 
-</section>
-
-<section>
-
-    <h2>Informations supplémentaires</h2>
-
-    <p>
-        Vous pouvez également visiter
-        <a href="https://www.discovertunisia.com">
-            le site officiel du tourisme tunisien
-        </a>.
-    </p>
-    <p>
-        <a href="index.html">Retour à l’accueil</a>
-    </p>
-
-    <p>
-        Email :
-        <a href="mailto:contact@tunisiatravel.com">
-            contact@tunisiatravel.com
-        </a>
-    </p>
-
-</section>
+    <p><a href="index.html">Retour à l'accueil</a></p>
+</main>
 
 <footer>
-    <p>© 2026 Tunisia Travel - Tous droits réservés</p>
+    <p>&copy; 2026 - Mon Projet. Tous droits réservés.</p>
 </footer>
 
 </body>
